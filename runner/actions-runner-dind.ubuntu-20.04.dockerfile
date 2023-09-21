@@ -5,8 +5,8 @@ ARG RUNNER_VERSION
 ARG RUNNER_CONTAINER_HOOKS_VERSION
 # Docker and Docker Compose arguments
 ARG CHANNEL=stable
-ARG DOCKER_VERSION=20.10.23
-ARG DOCKER_COMPOSE_VERSION=v2.20.0
+ARG DOCKER_VERSION=24.0.5
+ARG DOCKER_COMPOSE_VERSION=v2.21.0
 ARG DUMB_INIT_VERSION=1.2.5
 
 # Use 1001 and 121 for compatibility with GitHub-hosted runners
@@ -22,6 +22,7 @@ RUN apt-get update -y \
     build-essential \
     curl \
     ca-certificates \
+    diffoscope \
     dnsutils \
     ftp \
     git \
